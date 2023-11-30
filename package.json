@@ -27,8 +27,11 @@
         "eslint": "^8.45.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
+        "rollup-plugin-visualizer": "^5.9.3",
         "sass": "^1.69.5",
         "typescript": "^5.0.2",
-        "vite": "^4.4.5"
+        "vite": "^4.4.5",
+        "vite-plugin-cdn-import": "^0.3.5",
+        "vite-plugin-remove-console": "^2.1.1"
     }
 }
