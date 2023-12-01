@@ -1,9 +1,14 @@
-import { Button } from 'antd'
+import { useRoutes, NavLink, Link } from 'react-router-dom'
+import routes from './router'
 function App() {
-    console.log('vite-plugin-remove-console')
+    console.log(routes)
+    const Outlet = useRoutes(routes)
     return (
         <div className='App'>
-            <Button type='primary'>顶级组件</Button>
+            <NavLink to=''>首页</NavLink>
+            <NavLink to='home'>Home</NavLink>
+            <Link to='about'>About</Link>
+            {Outlet}
         </div>
     )
 }
