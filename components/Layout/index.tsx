@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Breadcrumb, Layout, theme } from 'antd'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import MenuComponent from './Menu'
 const { Header, Content, Footer, Sider } = Layout
 const LayoutComponent: React.FC = () => {
@@ -8,6 +8,14 @@ const LayoutComponent: React.FC = () => {
     const {
         token: { colorBgContainer },
     } = theme.useToken()
+    //获取到locationStorage中的token
+    const token = localStorage.getItem('token')
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (!token) {
+            navigate('/login', { replace: true })
+        }
+    }, [token])
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
