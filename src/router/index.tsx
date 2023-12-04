@@ -5,6 +5,7 @@ import LayoutComponent from '../../components/Layout'
 import About from '@/views/About'
 import Home from '@/views/Home'
 import List from '@/views/List'
+import Login from '@/views/Login'
 const withLoadingComponent = (Component: JSX.Element) => (
     <React.Suspense fallback={<div>Loading...</div>}>{Component}</React.Suspense>
 )
@@ -12,6 +13,10 @@ const routes: RouteObject[] = [
     {
         path: '/',
         element: <Navigate to='/home' />,
+    },
+    {
+        path: '/login',
+        element: <Login />,
     },
     {
         element: <LayoutComponent />,

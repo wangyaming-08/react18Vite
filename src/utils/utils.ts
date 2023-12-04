@@ -1,5 +1,5 @@
 export const getTreeIds = (tree, nodeId, config = {}) => {
-    const { children = 'children', id = 'id' } = config
+    const { children = 'children', id = 'id' } = config as any
     const toFlatArray = (tree, parentId = null) => {
         return tree.reduce((t, _) => {
             const child = _[children]

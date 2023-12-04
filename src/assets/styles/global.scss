@@ -3,6 +3,13 @@ body {
     user-select: none;
     background-color: $color;
 }
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+
 img {
     -webkit-user-drag: none;
 }
